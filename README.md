@@ -25,5 +25,5 @@ public_html/
 - JavaScript
 
 ## Role
-- Designed and developed the front-end of the website
+- Designed and developed the entire website
 - Ensured responsiveness and cross-browser compatibility
