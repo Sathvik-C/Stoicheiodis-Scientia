@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Basic Favicon -->
+    <link rel="icon" href="assets/images/ss_logo_c.png" type="image/x-icon">
+    <title>Stoicheiodis Scientia</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@700&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- NAVBAR (OLD) -->
+    <!--
+    <header class="glass-navbar">
+      <ul class="glass-nav-links">
+        <li><a href="#about">About</a></li>
+        <li class="dropdown">
+          <a href="#">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="abrasive.html">Abrasive Flow Machining</a></li>
+            <li><a href="putty.html">Therapy Putty</a></li>
+          </ul>
+        </li>
+        <li><a href="#awards">Gallery</a></li>
+        <li><a href="#partners">Partnerships</a></li>
+      </ul>
+    </header>
+    -->
+
+    <!-- HAMBURGER NAVBAR -->
+    <!-- Compact Right Drawer Hamburger -->
+    <!-- Hamburger Icon -->
+    <button id="hamburger" class="hamburger" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
+    <!-- Right Drawer Menu -->
+    <nav id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      
+
+      <!--<button id="closeBtn" class="close-btn" aria-label="Close menu">×</button> -->
+      <a href="#about">About</a>
+      <a href="abrasive.html">Abrasive Flow Finishing</a>
+      <a href="therapy.html">Therapeuty</a>
+      <a href="#awards">Awards</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#partners">Partnerships</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="main-content" id="mainContent">
+    
+      <!-- Hero Section -->
+      <!-- <section class="hero">
+        <div id="particles-js"></div>
+        Particle background
+
+        <div class="hero-top">
+          <h1 class="brand">Stoicheiodis Scientia</h1>
+          <a href="#contact" class="contact-btn">Contact</a>
+        </div>
+
+        <div class="hero-content">
+          <h1>Cutting-edge Product Innovation</h1>
+          <p>From Lab to Industry in Material Science.</p>
+        </div>
+      </section> -->
+
+      <section class="hero">
+        <div id="particles-js"></div>
+
+        <div class="stoic-text">
+      <h1>
+        Redesigning Materials Engineering <br> 
+      <span> Like Never Before</span>
+      </h1>
+      </div>
+        </section>
+
+
+      <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+      <script src="assets/js/particles-config.js"></script>
+
+      <!-- ABOUT SECTION -->
+      <section id="about" class="about-section">
+        <div class="about-container">
+          <div class="about-heading">
+            <p style="font-size: 50px;">Vision</p>
+        </div>
+        <div class="about-paragraph">
+          <p class="scroll-fade-words">
+              Indigenization of Super Engineered Materials Vital for National Security and Public Health.
+          </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <div id="services-wrapper">
+        <section class="slide dark" id="abrasive-slide">
+          <div
+            class="slide-image"
+            style="background-image: url('assets/images/abrasive.png')"
+          ></div>
+          <div class="slide-content">
+            <div class="slide-number"></div>
+            <h2>Abrasive Flow Finishing</h2>
+            <p>
+              Precision-engineered media for deburring, polishing, and finishing.
+              Consistent performance across high-precision industries.
+            </p>
+            <a href="abrasive.html" class="slide-button">More Details</a>
+          </div>
+        </section>
+
+        <section class="slide dark" id="putty-slide">
+          <div
+            class="slide-image"
+            style="background-image: url('assets/images/putty.JPG')"
+          ></div>
+          <div class="slide-content">
+            <div class="slide-number"></div>
+            <h2>Therapeuty</h2>
+            <p>
+              Hand exercises simplified.
+            </p>
+            <a href="therapy.html" class="slide-button">More Details</a>
+          </div>
+        </section>
+      </div>
+
+      <!-- Awards -->
+      <section id="awards" class="awards-section">
+        <div class="awards-container">
+          <div class="awards-left">
+            <h2>Awards </h2>
+            <p>
+              
+            </p>
+          </div>
+          <div class="awards-right">
+            <div class="awards-carousel" id="awardsCarousel">
+              <div class="award-card">
+                <img src="assets/images/awards/itbt.png" alt="Award 1" />
+                <h3>Rajiv gandhi entrepreneurship program</h3>
+                <p>Awarded as winner 2025</p>
+              </div>
+              <div class="award-card">
+                <img src="assets/images/awards/nest.jpeg" alt="Award 2" />
+                <h3>Design Impact movement </h3>
+                <p>Recognized among the top startups in the program 2025.</p>
+              </div>
+              <div class="award-card">
+                <img src="assets/images/awards/rajivgandhi.png" alt="Award 1" />
+                <h3>WEscalate Women entrepreneurship program</h3>
+                <p>Awarded as winners</p>
+              </div>
+            </div>
+          </div>
+          <!-- Mobile-only controls -->
+          <div class="awards-controls mobile-only">
+            <button class="awards-arrow awards-arrow-left">&#8592;</button>
+            <button class="awards-arrow awards-arrow-right">&#8594;</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section id="gallery" class="gallery-section">
+        <div class="gallery-container">
+          <h2 class="gallery-title">Gallery</h2>
+          <div class="gallery-wrapper">
+            <button class="gallery-arrow gallery-arrow-left" aria-label="Previous">&#8592;</button>
+            <div class="gallery-viewport">
+              <div class="gallery-track">
+                <figure class="gallery-card">
+                  <img src="assets/images/bbc%20aus.jpg" alt="With BBC Australia team">
+                  <figcaption class="gallery-caption">With BBC Australia team</figcaption>
+                </figure>
+                <figure class="gallery-card">
+                  <img src="assets/images/IMTEX_2.jpg" alt="IMTEX 2025">
+                  <figcaption class="gallery-caption">IMTEX 2025</figcaption>
+                </figure>
+                <!-- Add more gallery cards as needed -->
+              </div>
+            </div>
+            <button class="gallery-arrow gallery-arrow-right" aria-label="Next">&#8594;</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Partnership -->
+      <section id="partners" class="partners-section">
+        <h2>Our Partners</h2>
+        <div class="partner-logos">
+          <img src="assets/images/partnerships/bbc.png" alt="Partner 1" />
+          <img src="assets/images/partnerships/bigfoundation.jpg" alt="Partner 2"/>
+          <img src="assets/images/partnerships/cmti.png" alt="Partner 4" />
+          <img src="assets/images/partnerships/cwe.jpeg" alt="Partner 4" />
+        </div>
+      </section>
+
+      <!-- Team section -->
+        <section id="team" class="team-section">
+      <h1 class="team-title" style="text-align:center">Meet Our Team</h1>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="assets/images/team/suneetha.jpg" alt="Dr.Y K Suneetha" style="width:100%">
+            <div class="container">
+              <h2>Dr.Y K Suneetha</h2>
+              <p class="title">Founder</p>
+            </div>
+          </div>
+        </div>
+
+      <div class="column">
+        <div class="card">
+          <img src="assets/images/team/subhash.png" alt="Subhash Chandra" style="width:100%">
+          <div class="container">
+            <h2 class="smaller-name"> Subhash Chandra</h2>
+            <p class="title">Co-Founder</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <img src="assets/images/team/ajay.png" alt="Ajay" style="width:100%">
+          <div class="container">
+            <h2>Ajay</h2>
+            <p class="title">Research Associate</p>
+          </div>
+        </div>
+      </div>
+
+        <div class="column">
+          <div class="card">
+            <img src="assets/images/team/omkar.png" alt="Omkar Sugate" style="width:100%">
+            <div class="container">
+              <h2>Omkar Sugate</h2>
+              <p class="title">Research Associate</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <!-- Hiring Section
+      <section class="careers-section">
+      <div class="careers-container">
+        <h2 class="careers-title">We’re Hiring!</h2>
+        <p class="careers-subtitle">
+          Join our team and help us create something amazing. Explore open roles below.
+        </p>
+
+
+
+        <div class="careers-grid">
+
+          <div class="job-card">
+            <h3 class="job-title">Web Developer</h3>
+            <p class="job-location">Bangalore • Intern</p>
+            <p class="job-desc">
+              Build modern web interfaces using React, CSS, and other frameworks.
+            </p>
+            <a href="mailto:contact@stoicheiodis.com" class="apply-btn">Apply Now</a>
+          </div>
+
+          <div class="job-card">
+            <h3 class="job-title">Animator and video rendering</h3>
+            <p class="job-location">Bangalore • Intern</p>
+            <p class="job-desc">
+              Transform 3D/animated scenes into high-quality final videos. Handle lighting, shading, and rendering processes to ensure realistic visuals.
+            </p>
+            <a href="mailto:contact@stoicheiodis.com" class="apply-btn">Apply Now</a>
+          </div>
+        
+          
+
+          
+          <div class="job-card">
+            <h3 class="job-title">Research Intern</h3>
+            <p class="job-location">Bangalore • Intern</p>
+            <p class="job-desc">
+              Work with our R&D team on innovative abrasive flow machining media, assisting with experiments and testing.
+            </p>
+            <a href="mailto:contact@stoicheiodis.com" class="apply-btn">Apply Now</a>
+          </div>
+          </div> 
+
+      </div> 
+      </section>
+      -->
+
+        
+
+
+      <!-- Contact -->
+      <section class="contact-section" id="contact">
+        <h2 class="section-title">Business Enquiries</h2>
+        <div class="contact-box">
+          <form id="contact-form" class="contact-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScEMA2bHS9G7oNFiJnc_Mrthqbv7w_0TUAJLRSt-uDHSXj-tQ/formResponse">
+            <input type="text" name="entry.2005620554" placeholder="Name" required>
+            <input type="email" name="entry.1045781291" placeholder="Email" required>
+            <div class="form-row">
+              <input type="text" name="entry.1166974658" placeholder="Phone">
+              <input type="text" name="entry.639864663" placeholder="Company Name">
+            </div>
+            <textarea name="entry.839337160" placeholder="Message" rows="4" required></textarea>
+            <button type="submit">Send</button>
+          </form>
+          <div class="contact-info">
+            <h3>Contact Us</h3>
+            <p><strong>Email:</strong> <a href="mailto:contact@stoicheiodis.com">contact@stoicheiodis.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+919886236667">+91 9886236667</a></p>
+            <p><strong>Address:</strong> <span>Bengaluru, India</span></p>
+            <div class="socials">
+              <a href="https://www.linkedin.com/company/stoicheiodis-scientia/" target="_blank" aria-label="LinkedIn">
+                <img src="assets/images/contact/linkedin.svg" alt="LinkedIn">
+              </a>
+              <a href="https://www.instagram.com/therapeutty?igsh=Z2k2d3dncHVuOHlx" target="_blank" aria-label="Instagram">
+                <img src="assets/images/contact/instagram.svg" alt="Instagram">
+              </a>
+            </div>
+          </div>
+        </div>
+      </section> 
+    </div>
+
+    
+
+
+    <script src="assets/js/main.js?v=FORCEOVERFLO2025"></script>
+  </body>
+</html>

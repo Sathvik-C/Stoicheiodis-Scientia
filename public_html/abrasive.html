@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/ss_logo_c.png" type="image/x-icon">
+    <title>Abrasive Flow Finishing - Stoicheiodis Scientia</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700&family=Montserrat&display=swap" rel="stylesheet">
+    <style>
+        /* ========== ABRASIVE PAGE SPECIFIC STYLES ========== */
+        
+        /* Hero Section */
+        .product-hero {
+            min-height: 60vh;
+            background: linear-gradient(135deg, #252525 0%, #454545 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 80px 20px;
+        }
+        
+        .product-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .product-hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card h3 {
+            color: #252525;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .feature-card p {
+            color: #454545;
+            line-height: 1.6;
+        }
+        
+        /* Applications Section */
+        .applications {
+            background: var(--albescent-white);
+            padding: 60px 20px;
+        }
+        
+        .applications h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #252525;
+        }
+        
+        .app-list {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .app-item {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #454545;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: #252525;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: var(--ashlite);
+            color: #252525;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-btn:hover {
+            background: var(--albescent-white);
+            transform: translateY(-3px);
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .product-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .product-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .content-section {
+                padding: 40px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ========== NAVIGATION ========== -->
+    <button id="hamburger" class="hamburger" aria-label="Open menu">☰</button>
+    
+    <nav id="mobileMenu" class="mobile-menu" aria-hidden="true">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="abrasive.html">Abrasive Flow Finishing</a>
+        <a href="therapy.html">Therapeuty</a>
+        <a href="index.html#awards">Gallery</a>
+        <a href="index.html#partners">Partnerships</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <div class="main-content" id="mainContent">
+        
+        <!-- ========== HERO SECTION ========== -->
+        <section class="product-hero">
+            <div>
+                <h1>Abrasive Flow Finishing</h1>
+                <p>Precision-engineered media for superior surface finishing, deburring, and polishing across high-precision industries</p>
+            </div>
+        </section>
+
+        <!-- ========== ABOUT PRODUCT ========== -->
+        <section class="content-section">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: #252525;">What is Abrasive Flow Finishing?</h2>
+            <p style="font-size: 1.2rem; line-height: 1.8; color: #454545;">
+                Abrasive Flow Machining (AFM) is an advanced precision finishing process that uses a semi-solid abrasive media 
+                to polish, deburr, and improve surface finish of complex internal and external geometries. Our specially formulated 
+                media flows through or across the workpiece, removing material in a controlled manner to achieve exceptional 
+                surface quality and dimensional accuracy.
+            </p>
+        </section>
+
+        <!-- ========== KEY FEATURES ========== -->
+        <section class="content-section">
+            <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 40px; color: #252525;">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>🎯 Precision Engineering</h3>
+                    <p>Achieve micron-level surface finishing with consistent, repeatable results across complex geometries.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔬 Custom Formulations</h3>
+                    <p>Tailored abrasive media designed for specific materials and finishing requirements.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⚙️ Versatile Applications</h3>
+                    <p>Suitable for aerospace, automotive, medical devices, and precision manufacturing industries.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>💎 Superior Surface Quality</h3>
+                    <p>Achieve mirror-like finishes and eliminate microscopic imperfections that affect performance.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🚀 Enhanced Performance</h3>
+                    <p>Improve component longevity, reduce friction, and enhance fluid flow characteristics.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🌱 Eco-Friendly Process</h3>
+                    <p>Minimal waste generation and environmentally responsible manufacturing approach.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== INDUSTRY APPLICATIONS ========== -->
+        <section class="applications">
+            <h2>Industry Applications</h2>
+            <div class="app-list">
+                <div class="app-item">
+                    <h4 style="margin-bottom: 10px;">✈️ Aerospace</h4>
+                    <p>Turbine blades, fuel nozzles, and precision components</p>
+                </div>
+                <div class="app-item">
+                    <h4 style="margin-bottom: 10px;">🏥 Medical Devices</h4>
+                    <p>Surgical instruments, implants, and biomedical components</p>
+                </div>
+                <div class="app-item">
+                    <h4 style="margin-bottom: 10px;">🚗 Automotive</h4>
+                    <p>Engine components, fuel injection systems, and transmission parts</p>
+                </div>
+                <div class="app-item">
+                    <h4 style="margin-bottom: 10px;">🔧 Tool & Die</h4>
+                    <p>Molds, dies, and precision tooling</p>
+                </div>
+                <div class="app-item">
+                    <h4 style="margin-bottom: 10px;">⚡ Energy Sector</h4>
+                    <p>Hydraulic components and power generation equipment</p>
+                </div>
+                <div class="app-item">
+                    <h4 style="margin-bottom: 10px;">🔬 Research & Development</h4>
+                    <p>Prototype finishing and material research</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== TECHNICAL ADVANTAGES ========== -->
+        <section class="content-section">
+            <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 40px; color: #252525;">Technical Advantages</h2>
+            <div style="background: #f5f5f5; padding: 40px; border-radius: 16px;">
+                <ul style="font-size: 1.1rem; line-height: 2; color: #454545; max-width: 800px; margin: 0 auto;">
+                    <li><strong>Surface Finish:</strong> Achieves Ra values as low as 0.1 microns</li>
+                    <li><strong>Edge Radiusing:</strong> Controlled edge rounding without geometry distortion</li>
+                    <li><strong>Material Removal:</strong> Precise control from nanometers to millimeters</li>
+                    <li><strong>Complex Geometries:</strong> Access hard-to-reach internal passages</li>
+                    <li><strong>No Tool Wear:</strong> Self-adapting media conforms to workpiece</li>
+                    <li><strong>Batch Processing:</strong> Multiple parts finished simultaneously</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ========== CALL TO ACTION ========== -->
+        <section class="cta-section">
+            <h2>Ready to Transform Your Manufacturing Process?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 20px;">
+                Contact us to discuss your specific finishing requirements and discover how our abrasive flow solutions can elevate your product quality.
+            </p>
+            <a href="index.html#contact" class="cta-btn">Get In Touch</a>
+        </section>
+        
+    </div>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="assets/js/main.js?v=THROTTLED2025"></script>
+</body>
+</html>

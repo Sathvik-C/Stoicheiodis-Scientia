@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/ss_logo_c.png" type="image/x-icon">
+    <title>Therapeuty - Stoicheiodis Scientia</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700&family=Montserrat&display=swap" rel="stylesheet">
+    <style>
+        /* ========== THERAPY PAGE SPECIFIC STYLES ========== */
+        
+        /* Hero Section with Animated Sliding Background */
+        .therapy-hero {
+            height: 100vh;
+            max-height: 100vh;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        
+        /* Sliding Background Animation */
+        .therapy-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: linear-gradient(135deg, rgba(69,69,69,0.4) 0%, rgba(167,163,156,0.4) 100%);
+        }
+        
+        .therapy-hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        
+        .therapy-bg-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            animation: slideShow 25s infinite;
+        }
+        
+        .therapy-bg-slide:nth-child(1) {
+            animation-delay: 0s;
+        }
+        
+        .therapy-bg-slide:nth-child(2) {
+            animation-delay: 5s;
+        }
+        
+        .therapy-bg-slide:nth-child(3) {
+            animation-delay: 10s;
+        }
+        
+        .therapy-bg-slide:nth-child(4) {
+            animation-delay: 15s;
+        }
+        
+        .therapy-bg-slide:nth-child(5) {
+            animation-delay: 20s;
+        }
+        
+        @keyframes slideShow {
+            0% { opacity: 0; transform: scale(1); }
+            4% { opacity: 1; }
+            20% { opacity: 1; }
+            24% { opacity: 0; transform: scale(1.1); }
+            100% { opacity: 0; }
+        }
+        
+        .therapy-hero-content {
+            position: relative;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.15);
+            padding: 40px 50px;
+            border-radius: 15px;
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
+        }
+        
+        .therapy-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.5);
+            font-weight: 900;
+            color: #ffffff;
+        }
+        
+        .therapy-hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.8), 0 0 15px rgba(0,0,0,0.5);
+            color: #ffffff;
+            font-weight: 500;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .benefit-card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .benefit-card h3 {
+            color: #252525;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .benefit-card p {
+            color: #454545;
+            line-height: 1.6;
+        }
+        
+        /* Product Variants Section */
+        .variants-section {
+            background: var(--albescent-white);
+            padding: 60px 20px;
+        }
+        
+        .variants-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #252525;
+        }
+        
+        .variants-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+        }
+        
+        .variant-card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 12px;
+            text-align: center;
+            border-top: 4px solid #a7a39c;
+        }
+        
+        .variant-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #252525;
+        }
+        
+        .variant-card p {
+            color: #454545;
+        }
+        
+        /* Use Cases Section */
+        .use-cases {
+            padding: 60px 20px;
+            background: white;
+        }
+        
+        .use-cases h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #252525;
+        }
+        
+        .cases-list {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .case-item {
+            background: #f5f5f5;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #454545;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: #252525;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: var(--ashlite);
+            color: #252525;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-btn:hover {
+            background: var(--albescent-white);
+            transform: translateY(-3px);
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .therapy-hero {
+                height: 100vh;
+                max-height: 100vh;
+                min-height: 100vh;
+                padding: 60px 20px;
+            }
+            
+            .therapy-hero-content {
+                padding: 30px 25px;
+            }
+            
+            .therapy-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .therapy-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .content-section {
+                padding: 40px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ========== NAVIGATION ========== -->
+    <button id="hamburger" class="hamburger" aria-label="Open menu">☰</button>
+    
+    <nav id="mobileMenu" class="mobile-menu" aria-hidden="true">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="abrasive.html">Abrasive Flow Finishing</a>
+        <a href="therapy.html">Therapeuty</a>
+        <a href="index.html#awards">Gallery</a>
+        <a href="index.html#partners">Partnerships</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <div class="main-content" id="mainContent">
+        
+        <!-- ========== HERO SECTION ========== -->
+        <section class="therapy-hero">
+            <!-- Sliding Background Images -->
+            <div class="therapy-hero-background" id="therapyBgContainer">
+                <!-- Images will be dynamically loaded here -->
+            </div>
+            
+            <!-- Hero Content -->
+            <div class="therapy-hero-content">
+                <h1>Therapeuty</h1>
+                <p>Hand exercises simplified. Professional-grade therapy putty for rehabilitation, strength building, and stress relief</p>
+            </div>
+        </section>
+
+        <!-- ========== ABOUT PRODUCT ========== -->
+        <section class="content-section">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: #252525;">What is Therapy Putty?</h2>
+            <p style="font-size: 1.2rem; line-height: 1.8; color: #454545;">
+                Therapy putty is a specially formulated silicone-based exercise material designed for hand and finger rehabilitation, 
+                strength building, and fine motor skill development. Our therapeutic putty provides consistent resistance levels, 
+                making it ideal for occupational therapy, physical rehabilitation, and stress management. Non-toxic, non-oily, 
+                and safe for all ages, it's the perfect tool for recovering from injuries, improving grip strength, or simply 
+                relieving daily stress.
+            </p>
+        </section>
+
+        <!-- ========== KEY BENEFITS ========== -->
+        <section class="content-section">
+            <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 40px; color: #252525;">Key Benefits</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>💪 Strength Building</h3>
+                    <p>Progressively improve grip strength and finger dexterity with controlled resistance levels.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>🏥 Rehabilitation Support</h3>
+                    <p>Aid recovery from hand injuries, surgeries, arthritis, and carpal tunnel syndrome.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>🎯 Fine Motor Skills</h3>
+                    <p>Enhance coordination and precision for musicians, artists, and professionals requiring hand dexterity.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>😌 Stress Relief</h3>
+                    <p>Provide calming sensory input and help reduce anxiety through tactile engagement.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>🌿 Safe & Non-Toxic</h3>
+                    <p>Made from medical-grade silicone, safe for all ages, non-oily and leaves no residue.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>♻️ Long-Lasting</h3>
+                    <p>Durable formula that maintains consistency and resistance over extended use.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== PRODUCT VARIANTS ========== -->
+        <section class="variants-section">
+            <h2>Resistance Levels</h2>
+            <div class="variants-grid">
+                <div class="variant-card">
+                    <h4>🟡 Extra Soft</h4>
+                    <p>Tan/Beige</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">Ideal for early rehabilitation and children</p>
+                </div>
+                <div class="variant-card">
+                    <h4>🟢 Soft</h4>
+                    <p>Green</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">Light resistance for gentle therapy</p>
+                </div>
+                <div class="variant-card">
+                    <h4>🔴 Medium</h4>
+                    <p>Red</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">Moderate resistance for strength building</p>
+                </div>
+                <div class="variant-card">
+                    <h4>🔵 Firm</h4>
+                    <p>Blue</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">Strong resistance for advanced training</p>
+                </div>
+                <div class="variant-card">
+                    <h4>⚫ Extra Firm</h4>
+                    <p>Black</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">Maximum resistance for athletes</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== USE CASES ========== -->
+        <section class="use-cases">
+            <h2>Who Can Benefit?</h2>
+            <div class="cases-list">
+                <div class="case-item">
+                    <h4 style="margin-bottom: 10px;">🏥 Physical Therapy Patients</h4>
+                    <p>Post-surgery recovery, arthritis management, stroke rehabilitation</p>
+                </div>
+                <div class="case-item">
+                    <h4 style="margin-bottom: 10px;">🎸 Musicians</h4>
+                    <p>Finger strength and independence for guitarists, pianists, and string players</p>
+                </div>
+                <div class="case-item">
+                    <h4 style="margin-bottom: 10px;">💻 Office Workers</h4>
+                    <p>Prevention and relief from repetitive strain injuries and carpal tunnel</p>
+                </div>
+                <div class="case-item">
+                    <h4 style="margin-bottom: 10px;">🏋️ Athletes</h4>
+                    <p>Grip strength training for climbers, tennis players, and martial artists</p>
+                </div>
+                <div class="case-item">
+                    <h4 style="margin-bottom: 10px;">👶 Children</h4>
+                    <p>Fine motor skill development and sensory therapy</p>
+                </div>
+                <div class="case-item">
+                    <h4 style="margin-bottom: 10px;">🧓 Seniors</h4>
+                    <p>Maintaining hand mobility and preventing age-related stiffness</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== HOW TO USE ========== -->
+        <section class="content-section">
+            <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 40px; color: #252525;">Exercise Guide</h2>
+            <div style="background: #f5f5f5; padding: 40px; border-radius: 16px;">
+                <ul style="font-size: 1.1rem; line-height: 2; color: #454545; max-width: 800px; margin: 0 auto;">
+                    <li><strong>Full Grip Squeeze:</strong> Wrap putty in palm and squeeze repeatedly for overall hand strength</li>
+                    <li><strong>Finger Pinch:</strong> Pinch putty between thumb and each finger to improve pinch strength</li>
+                    <li><strong>Finger Extension:</strong> Wrap putty around fingers and spread to strengthen extensors</li>
+                    <li><strong>Wrist Rolls:</strong> Roll putty into a ball and rotate wrist for flexibility</li>
+                    <li><strong>Thumb Opposition:</strong> Press thumb to each fingertip through putty for coordination</li>
+                    <li><strong>Progressive Training:</strong> Start with softer resistance and advance as strength improves</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ========== CALL TO ACTION ========== -->
+        <section class="cta-section">
+            <h2>Start Your Hand Therapy Journey</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 20px;">
+                Contact us to order therapy putty or learn more about which resistance level is right for your needs.
+            </p>
+            <a href="index.html#contact" class="cta-btn">Order Now</a>
+        </section>
+        
+    </div>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="assets/js/main.js?v=THROTTLED2025"></script>
+    <script>
+        // Load therapy background images from "therapy images" folder
+        document.addEventListener('DOMContentLoaded', function() {
+            const bgContainer = document.getElementById('therapyBgContainer');
+            
+            // List of images to cycle through (your actual image filenames)
+            const therapyImages = [
+                'therapy%20images/IMG20250721165326.jpg',
+                'therapy%20images/IMG20250721165620.jpg',
+                'therapy%20images/IMG20250721164332.jpg',
+                'therapy%20images/IMG20250721164435.jpg',
+                'therapy%20images/IMG20250721165208.jpg',
+            ];
+            
+            // Create background slide divs for each image
+            therapyImages.forEach((imagePath, index) => {
+                const slideDiv = document.createElement('div');
+                slideDiv.className = 'therapy-bg-slide';
+                slideDiv.style.backgroundImage = `url('${imagePath}')`;
+                bgContainer.appendChild(slideDiv);
+                console.log('Added background image:', imagePath); // Debug log
+            });
+            
+            // Fallback: If no images load, use gradient
+            const firstImage = new Image();
+            firstImage.src = therapyImages[0];
+            firstImage.onerror = function() {
+                console.error('Failed to load images, using gradient fallback');
+                bgContainer.style.background = 'linear-gradient(135deg, #454545 0%, #a7a39c 100%)';
+            };
+            firstImage.onload = function() {
+                console.log('First image loaded successfully!');
+            };
+        });
+    </script>
+</body>
+</html>
